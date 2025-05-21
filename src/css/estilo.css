@@ -4,36 +4,273 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: sans-serif;
   background-color: #f9f9f9;
 }
 
-header nav {
+.cabecalho {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.cabecalho nav {
   color: #fff;
   background-color: #222;
   box-shadow: 0px 2px 4px rgba(0, 0, 0.3);
-  padding: 10px 0px;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-header nav ul {
+.cabecalho nav ul {
   display: flex;
   justify-content: center;
   list-style: none;
-  gap: 20px;
+  gap: 40px;
 }
 
-header nav a {
+.cabecalho nav a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
 }
 
-header nav a:hover {
+.cabecalho nav a:hover {
   color: #00aaff;
 }
 
-header h1 {
-  margin: 20px;
+main {
+  padding-top: 150px;
+}
+
+section {
+  scroll-margin-top: 100px;
+}
+
+.oq-e-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.oq-e-container figure img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+figcaption {
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+.texto-oq-e h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+#exemplos {
+  background-color: #eee;
+}
+
+.exemplos-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px;
+}
+
+.lista-exemplos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  list-style: none;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.lista-exemplos figure img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.riscos-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #0077cc;
+  color: white;
+}
+
+#como-usar {
+  background-color: #eee;
+}
+
+.como-usar-container {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.como-usar-container h2 {
+  margin-bottom: 10px;
+}
+
+.contato-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.contato-container h2 {
+  margin-bottom: 10px;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.formulario input,
+.formulario textarea {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-family: sans-serif;
+}
+
+.formulario button {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.formulario button:hover {
+  background-color: #005fa3;
+}
+
+.rodape {
+  padding: 40px;
+  background-color: #0077cc;
+  color: white;
+}
+
+/* Estilo do toggle */
+.modo-escuro-toggle {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  background-color: #ddd;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.modo-escuro-toggle:hover {
+  background-color: #ccc;
+}
+
+.modo-escuro-toggle label {
+  cursor: pointer;
+}
+
+/* Modo escuro */
+#modo-escuro:checked ~ .site-wrapper {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+#modo-escuro:checked ~ .site-wrapper .cabecalho nav {
+  background-color: #1e1e1e;
+}
+
+#modo-escuro:checked ~ .site-wrapper .cabecalho nav a {
+  color: #f0f0f0;
+}
+
+#modo-escuro:checked ~ .site-wrapper #exemplos {
+  background-color: #1a1a1a;
+}
+
+#modo-escuro:checked ~ .site-wrapper #como-usar {
+  background-color: #1a1a1a;
+}
+
+#modo-escuro:checked ~ .site-wrapper .rodape {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+#modo-escuro:checked ~ .site-wrapper table th {
+  background-color: #333;
+}
+
+#modo-escuro:checked ~ .site-wrapper table td {
+  background-color: #222;
+  color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .cabecalho nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .cabecalho nav ul {
+    gap: 20px;
+  }
+
+  .oq-e-container figure img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .rodape {
+    padding: 20px;
+  }
+
+  .modo-escuro-toggle {
+    top: 150px;
+  }
 }

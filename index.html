@@ -7,17 +7,198 @@
     <link rel="stylesheet" href="./src/css/estilo.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="">O que é IA?</a></li>
-          <li><a href="">Exemplos</a></li>
-          <li><a href="">Riscos Éticos</a></li>
-          <li><a href="">Como Usar?</a></li>
-          <li><a href="">Contato</a></li>
-        </ul>
-      </nav>
-      <h1>Inteligência Artificial</h1>
-    </header>
+    <input type="checkbox" id="modo-escuro" hidden />
+    <label for="modo-escuro" class="modo-escuro-toggle">🌙 Modo Escuro</label>
+
+    <div class="site-wrapper">
+      <header class="cabecalho">
+        <nav>
+          <h1>Inteligência Artificial</h1>
+          <ul>
+            <li><a href="#oq-e-ia">O que é IA?</a></li>
+            <li><a href="#exemplos">Exemplos</a></li>
+            <li><a href="#riscos">Riscos Éticos</a></li>
+            <li><a href="#como-usar">Como Usar?</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <section id="oq-e-ia">
+          <article class="oq-e-container">
+            <figure>
+              <img
+                src="./src/assets/oq-e-ia.jpeg"
+                alt="Imagem Ilustrativa de IA"
+              />
+              <figcaption>Inteligência Artificial</figcaption>
+            </figure>
+            <div class="texto-oq-e">
+              <h2>O que é Inteligência Artificial?</h2>
+              <p>
+                Inteligência Artificial (IA) refere-se à capacidade de máquinas,
+                sistemas ou softwares simulares e replicarem a inteligência
+                humana, permitindo que realizem tarefas que exigiam raciocínio e
+                pensamento. Isso inclui atividades como aprender, resolver
+                problemas, reconhecer padrões e tomar decisões de forma
+                autônoma.
+              </p>
+            </div>
+          </article>
+        </section>
+
+        <section id="exemplos">
+          <article class="exemplos-container">
+            <h2>Exemplos atuais de uso de IA</h2>
+            <ul class="lista-exemplos">
+              <li>
+                <figure>
+                  <img src="./src/assets/chatbot.jpg" alt="Imagem ChatBot" />
+                  <figcaption>Chatbots em sites e aplicativos</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <img
+                    src="./src/assets/diagnostico.jpg"
+                    alt="Imagem de diagnóstico"
+                  />
+                  <figcaption>
+                    Diagnósticos médicos auxiliados por IA
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <img
+                    src="./src/assets/reconhecimento.png"
+                    alt="Imagem de reconhecimento facial"
+                  />
+                  <figcaption>Reconhecimento facial e de voz</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <img
+                    src="./src/assets/carros.jpg"
+                    alt="Imagem de carro autônomo"
+                  />
+                  <figcaption>Carros autônomos</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <section id="riscos">
+          <article class="riscos-container">
+            <h2>Riscos e Cuidados Éticos</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Usos Positivos</th>
+                  <th>Usos Negativos</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Auxílio médico e diagnóstico</td>
+                  <td>Discriminação algorítmica</td>
+                </tr>
+                <tr>
+                  <td>Automação de tarefas perigosas</td>
+                  <td>Vigilância em massa</td>
+                </tr>
+                <tr>
+                  <td>Educação personalizada</td>
+                  <td>Manipulação de informações</td>
+                </tr>
+                <tr>
+                  <td>Otimização de transporte e tráfego</td>
+                  <td>Perda de empregos em massa</td>
+                </tr>
+                <tr>
+                  <td>Assistência a pessoas com deficiência</td>
+                  <td>Violação de privacidade</td>
+                </tr>
+                <tr>
+                  <td>Melhoria na produção agrícola</td>
+                  <td>Dependência tecnológica excessiva</td>
+                </tr>
+                <tr>
+                  <td>Combate a crimes cibernéticos</td>
+                  <td>Uso militar/autônomo letal</td>
+                </tr>
+                <tr>
+                  <td>Economia de recursos naturais com otimização</td>
+                  <td>Deepfakes e desinformação</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </section>
+
+        <section id="como-usar">
+          <article class="como-usar-container">
+            <h2>Como usar a IA de forma segura e responsável</h2>
+            <ol>
+              <li>Compreenda os dados usados para treinar a IA</li>
+              <li>Evite vieses e discriminações</li>
+              <li>Seja transparente sobre o uso da IA</li>
+              <li>Proteja dados pessoais e sensíveis</li>
+              <li>Use a IA para fins éticos e benéficos</li>
+              <li>Garanta a explicabilidade das decisões tomadas pela IA</li>
+              <li>Monitore o impacto social e ambiental da IA</li>
+              <li>Esteja atento às atualizações e melhorias constantes</li>
+              <li>Eduque os usuários sobre as limitações da IA</li>
+              <li>Respeite legislações e normas locais e internacionais</li>
+            </ol>
+          </article>
+        </section>
+
+        <section id="contato">
+          <article class="contato-container">
+            <h2>Envie sua opinião</h2>
+            <form class="formulario">
+              <label for="nome">Nome:</label>
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Digite seu nome"
+                required
+              />
+
+              <label for="email">E-mail:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Digite seu e-mail"
+                required
+              />
+
+              <label for="mensagem">Sugestão/Opinião:</label>
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                placeholder="Digite sua sugestão"
+                required
+              ></textarea>
+
+              <button type="submit">Enviar</button>
+            </form>
+          </article>
+        </section>
+      </main>
+
+      <footer class="rodape">
+        <p>
+          &copy; 2025 - Projeto de Conscientização sobre IA feito por Pedro
+          Faleiros na FIAP
+        </p>
+      </footer>
+    </div>
   </body>
 </html>
